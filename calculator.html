@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100%;
+            border: solid black 2px; 
+            background-color: white;
+        }
+        input{ border: solid black 2px}
+
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="3" ><input id="result" type="text"></td>
+        <td><button onclick="clr()">Clear</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="display(1)">1</button></td>
+        <td><button onclick="display(2)">2</button></td>
+        <td><button onclick="display(3)">3</button></td>
+        <td><button onclick="setOperator('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="display(4)">4</button></td>
+        <td><button onclick="display(5)">5</button></td>
+        <td><button onclick="display(6)">6</button></td>
+        <td><button onclick="setOperator('-')"> -</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="display(7)">7</button></td>
+        <td><button onclick="display(8)"> 8</button></td>
+        <td><button onclick="display(9)">9</button></td>
+        <td><button onclick="setOperator('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="display('.')">.</button></td>
+        <td><button onclick="display(0)">0</button></td>
+        <td><button onclick="solve">=</button></td>
+        <td><button onclick="setOperator('*')">*</button></td>
+
+    </tr>
+</table>
+<script>
+    let soDauTien;
+    let soThuHai;
+    let toanTu="";
+    let display = function (n){
+        let result = document.getElementById("result");
+        if(result.Value === "+" || result.value === "-"|| result.value === "*" || result.value === "/"){
+            result.value=""
+        }
+        
+        result.value +=n;}
+    let setOperator = funtion(n);{
+        let result = document.getElementById("result");
+        soDauTien = result.value;
+        result.value = n;
+        toanTu=n
+
+    }
+    let solve=function(){
+        let result=document.getElementById("result");
+        soThuHai=result.value;
+       let ketQua = 0;
+       soDauTien = parseFloat (soDauTien);
+       soThuHai = parseFloat (soThuHai);
+      
+       if(toanTu === "+"){
+           ketQua = soDauTien + soThuHai;
+       }
+       if(toanTu === "-"){
+           ketQua = soDauTien - soThuHai;
+       }
+       if(toanTu === "*"){
+           ketQua = soDauTien * soThuHai;
+       }
+       if(toanTu === "/"){
+           ketQua = soDauTien / soThuHai;
+       }
+       result.value = ketQua
+
+    }
+    let Clr=function(){
+        document.getElementById ("result").value=""
+
+    }
+</script>
+
+    <!-- <script> 
+        let age=15;
+        if(age<18){
+            console.log ("Bạn chưa đủ tuổi lái ô tô")
+        } else {
+            console,log("Bạn đủ tuổi lát ô tô")
+        }
+    </script>-->
+</body>
+</html>
