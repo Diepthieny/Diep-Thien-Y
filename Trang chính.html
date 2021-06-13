@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Style3.css">
+  <link rel="stylesheet" href="/grid-layout.css">
+</head>
+<style>
+  .blue {
+    width: 100px;
+    height: 100px;
+    margin-left: 0px;
+    display: block;
+    float: left;
+    margin-top: 0;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap" rel="stylesheet">
+<body>
+
+  <header>
+    <div class="container">
+      <div class="col-3"><img src="/logo.png" class="blue"></div>
+
+
+      <div class="nav col-9">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Quốc kì các nước</a></li>
+          <li><a href="#">Việt Nam</a></li>
+          <li><a href="#">Trung Quốc</a></li>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+  </header>
+
+
+
+  </div>
+  <div class="container-fluid">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 7</div>
+      <img src="/Giếng Thor (Mỹ).jpg" style="width:100%">
+      <div class="text">Giếng Thor (Mỹ)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 7</div>
+      <img src="/Thác Niagara (Canada).jpg" style="width:100%">
+      <div class="text">Thác Niagara (Canada)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 7</div>
+      <img src="/Núi Matterhorn (Thụy Sĩ).jpg" style="width:100%">
+      <div class="text">Núi Matterhorn (Thụy Sĩ)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 7</div>
+      <img src="/Grand Canyon (Mỹ).jpg" style="width:100%">
+      <div class="text">Grand Canyon (Mỹ)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 7</div>
+      <img src="/Hang động Marble (Chile).jpg" style="width:100%">
+      <div class="text">Hang động Marble (Chile)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 7</div>
+      <img src="/Vịnh Milford Sound (New Zealand).PNG" style="width:100%">
+      <div class="text">Vịnh Milford Sound (New Zealand)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 7</div>
+      <img src="/Vườn quốc gia Sequoia (Mỹ).jpg" style="width:100%">
+      <div class="text">Vườn quốc gia Sequoia (Mỹ)</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+
+    }
+  </script>
+  
+  <div class="content">
+    <div class="continent">
+      <img src="/pagoda.png">
+      <h3>Châu Á</h3>
+    </div>
+    <div class="continent">
+      <img src="/european-union.png">
+      <h3>Châu Âu</h3>
+    </div>
+    <div class="continent">
+      <img src="/pyramids.png">
+      <h3>Châu Phi</h3>
+    </div>
+    <div class="continent">
+      <img src="/eagle.png">
+      <h3>Châu Mĩ</h3>
+    </div>
+    <div class="continent">
+      <img src="/kangaroo.png">
+      <h3>Châu Đại Dương</h3>
+    </div>
+  </div>
+</body>
+
+</html>
